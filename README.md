@@ -421,7 +421,9 @@ app.use('/', proxy('internalhost.example.com', {
 })
 ```
 
+### Q: POST params are missing / broken / mangled, what's happening?
 
+If you're using a middleware that handles POST params like body-parser, multer etc., make sure that you initialize express-http-proxy **before** them.
 
 ## Release Notes
 
